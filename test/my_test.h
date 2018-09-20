@@ -110,8 +110,6 @@ namespace MyTestSuite_##SUITE_NAME {                    \
     };                                                  \
 }                                                       \
                                                         \
-using MyTestSuite_##SUITE_NAME::TestRunner;             \
-                                                        \
 namespace MyTestSuite_##SUITE_NAME
 
 #define TEST_CASE(CASE_NAME)                            \
@@ -128,5 +126,9 @@ class MyTestCase_##CASE_NAME : private TestBase {       \
 MyTestCase_##CASE_NAME MyTestCase_##CASE_NAME::Instance;\
                                                         \
 void MyTestCase_##CASE_NAME::Run()
+
+#define RUN_TEST_SUITE(SUITE_NAME) \
+MyTestSuite_##SUITE_NAME::TestRunner::RunTests()
+
 
 #endif /// MY_TEST_H

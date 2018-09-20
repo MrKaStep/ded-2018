@@ -70,6 +70,6 @@ TEST_SUITE(Test) {
 }
 
 int main() {
-    TestRunner::RunTests();
+    RUN_TEST_SUITE(Test);
     return 0;
 }
