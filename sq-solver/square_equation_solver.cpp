@@ -5,7 +5,7 @@
 
 namespace SqSolver {
 
-using namespace Util;
+using Util::IsZero;
 
 bool IsLinear(const Equation& equation) {
     return IsZero(equation.a);
@@ -34,7 +34,7 @@ Result SolveSquareInternal(const Equation& equation) {
 
 
 
-    if (IsLessOrEqual(discriminant, 0)) {
+    if (Util::IsLessOrEqual(discriminant, 0)) {
         if (IsZero(discriminant)) {
             return Result(1, -equation.b / (2 * equation.a));
         }
