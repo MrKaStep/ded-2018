@@ -1,5 +1,12 @@
 #include <iostream>
+
+#include "square_equation_solver.h"
+
+void ShowGreeting() {
+
+}
+
 int main() {
-  std::cout << "Hello, World!" << std::endl;
-  return 0;
+    ShowGreeting();
+    return 0;
 }
