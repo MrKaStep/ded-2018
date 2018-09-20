@@ -9,7 +9,7 @@
 #include <cstdlib>
 #include <limits>
 
-static constexpr size_t INF_ROOTS = std::numeric_limits<size_t>::max();
+constexpr size_t INF_ROOTS = std::numeric_limits<size_t>::max();
 
 namespace SqSolver {
 
