@@ -116,7 +116,7 @@ namespace MyTestSuite_##SUITE_NAME
 class MyTestCase_##CASE_NAME : private TestBase {       \
   private:                                              \
     explicit MyTestCase_##CASE_NAME() : TestBase(#CASE_NAME) {} \
-  private:                                              \
+  private:                                            \
     void Run() override final;                          \
                                                         \
   private:                                              \
@@ -127,8 +127,7 @@ MyTestCase_##CASE_NAME MyTestCase_##CASE_NAME::Instance;\
                                                         \
 void MyTestCase_##CASE_NAME::Run()
 
-#define RUN_TEST_SUITE(SUITE_NAME) \
+#define RUN_TEST_SUITE(SUITE_NAME)                      \
 MyTestSuite_##SUITE_NAME::TestRunner::RunTests()
-
 
 #endif /// MY_TEST_H
