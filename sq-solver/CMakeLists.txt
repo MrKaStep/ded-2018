@@ -9,7 +9,7 @@ include_directories(../test)
 target_link_libraries(sq_solver util)
 
 add_executable(sq_solver_main main.cpp)
-add_dependencies(sq_solver_main sq_solver)
+target_link_libraries(sq_solver_main sq_solver)
 
 add_executable(sq_solver_ut sq_solver_ut.cpp)
 add_dependencies(sq_solver_ut sq_solver)
