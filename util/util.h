@@ -2,11 +2,12 @@
 #define UTIL_H
 
 #include <cmath>
+#include <limits>
 
 /**
  * @brief epsilon for math operations
  */
-#define EPSILON 1e-9
+const double EPSILON = std::numeric_limits<double>::epsilon();
 
 /**
  * @brief branch prediction optimization
