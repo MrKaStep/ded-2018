@@ -116,7 +116,7 @@ namespace MyTestSuite_##SUITE_NAME
 class MyTestCase_##CASE_NAME : private TestBase {       \
   private:                                              \
     explicit MyTestCase_##CASE_NAME() : TestBase(#CASE_NAME) {} \
-  private:                                            \
+  private:                                              \
     void Run() override final;                          \
                                                         \
   private:                                              \
