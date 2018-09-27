@@ -32,8 +32,6 @@ Result SolveSquareInternal(const Equation& equation) {
 
     double discriminant = equation.b * equation.b - 4 * equation.a * equation.c;
 
-
-
     if (Util::IsLessOrEqual(discriminant, 0)) {
         if (IsZero(discriminant)) {
             return Result(1, -equation.b / (2 * equation.a));

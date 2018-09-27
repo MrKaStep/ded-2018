@@ -12,16 +12,18 @@ double ReadDouble(const std::string& name) {
     return res;
 }
 
+#define __bydesign
+
 int main() {
-    double a, b, c;
-    size_t rootCount;
-    double x1, x2;
+    double a = ReadDouble("coeff a");
+    double b = ReadDouble("coeff b");
+    double c = ReadDouble("coeff c");
 
-    a = ReadDouble("coeff a");
-    b = ReadDouble("coeff b");
-    c = ReadDouble("coeff c");
+    size_t rootCount = 0;
+    double x1 = NAN;
+    double x2 = NAN;
 
-    SolveSquare(a, b, c, &rootCount, &x1, &x2);
+    __bydesign SolveSquare(a, b, c, &rootCount, &x1, &x2);
 
     if (rootCount == INF_ROOTS) {
         std::cout << "Infinite number of roots" << std::endl;

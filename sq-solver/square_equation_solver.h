@@ -48,7 +48,7 @@ struct Equation {
  * @param equation
  * @return true iff @p equation is linear
  */
-bool IsLinear(Equation& equation);
+bool IsLinear(const Equation& equation);
 
 /**
  * @brief Solves linear equation
@@ -59,7 +59,7 @@ bool IsLinear(Equation& equation);
  * @param equation
  * @return Result with roots description
  */
-Result SolveLinear(Equation& equation);
+Result SolveLinear(const Equation& equation);
 
 /**
  * @brief Solves square equation
@@ -71,7 +71,7 @@ Result SolveLinear(Equation& equation);
  * @param equation
  * @return Result with roots description
  */
-Result SolveSquareInternal(Equation& equation);
+Result SolveSquareInternal(const Equation& equation);
 
 } /// namespace SqSolver
 
